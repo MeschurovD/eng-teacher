@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "English Conversation Tutor Settings",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "levelTarget": {
+      "type": "string",
+      "title": "Target level",
+      "enum": ["A2", "B1", "B2"],
+      "description": "Preferred target CEFR level for lessons and feedback."
+    },
+    "correctionMode": {
+      "type": "string",
+      "title": "Correction mode",
+      "enum": ["gentle", "balanced", "strict"],
+      "description": "How directly the tutor should correct mistakes."
+    },
+    "responseLanguage": {
+      "type": "string",
+      "title": "Response language",
+      "enum": ["ru", "en", "mixed"],
+      "description": "Preferred language for explanations and guidance."
+    },
+    "lessonMode": {
+      "type": "string",
+      "title": "Lesson mode",
+      "enum": ["conversation", "grammar", "mixed"],
+      "description": "Main lesson emphasis."
+    },
+    "homeworkEnabled": {
+      "type": "boolean",
+      "title": "Homework enabled",
+      "description": "Whether the tutor may suggest short homework tasks."
+    },
+    "focusTopics": {
+      "type": "array",
+      "title": "Focus topics",
+      "description": "Topics to prioritize in conversation and exercises.",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "weeklyGoal": {
+      "type": "string",
+      "title": "Weekly goal",
+      "description": "Learner's short weekly study goal."
+    }
+  },
+  "required": [
+    "levelTarget",
+    "correctionMode",
+    "responseLanguage",
+    "lessonMode",
+    "homeworkEnabled",
+    "focusTopics",
+    "weeklyGoal"
+  ]
+}

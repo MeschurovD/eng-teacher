@@ -1,0 +1,38 @@
+{
+  "id": "english-conversation-tutor",
+  "slug": "english-conversation-tutor",
+  "title": "English Conversation Tutor",
+  "description": "A prompt-only English tutor for adults focused on conversation practice, gentle correction, and practical progress from A2 to B1.",
+  "version": "0.1.0",
+  "manifestVersion": "1.0",
+  "entryMode": "prompt-only",
+  "prompts": {
+    "system": "prompts/system.md",
+    "style": "prompts/style.md",
+    "policies": "prompts/policies.md"
+  },
+  "config": {
+    "settingsSchema": "config/settings.schema.json",
+    "defaults": "config/defaults.json"
+  },
+  "resources": [
+    "resources/overview.md",
+    "resources/teaching-approach.md",
+    "resources/sample-session.md"
+  ],
+  "capabilities": {
+    "supportsChat": true,
+    "supportsSchedule": true,
+    "supportsLongTermMemory": true
+  },
+  "defaultChatTitle": "English practice session",
+  "tags": [
+    "english",
+    "conversation",
+    "grammar",
+    "a2",
+    "b1"
+  ],
+  "author": "OpenAI",
+  "license": "MIT"
+}
